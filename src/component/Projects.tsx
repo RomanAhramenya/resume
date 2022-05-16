@@ -15,7 +15,7 @@ const Projects:FC = () => {
         {state.project.length > 0 && state.project.map(el=>{
             return <a href={el.url} target='_blank' key={el.id} className={s.projectItem}>
                 <div className={s.projectImage}>
-                    <img src={el.image}/>
+                    Project
                 </div>
                 <div className={s.projectName}>
                     {el.name}
