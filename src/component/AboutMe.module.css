@@ -1,0 +1,145 @@
+.aboutMe{
+    width: 60%;
+    background:rgba(34, 34, 34, 0.568);
+    border: solid 1px gray;
+    margin: 8rem auto 2rem;
+    position: relative;
+}
+.aboutMe_logo{
+    position: absolute;
+    top: -5rem;
+    left:calc(50% - 5rem);
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    box-shadow:0 0 5px white
+}
+.aboutMe_logo img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+}
+
+.aboutMeName{
+    font-family: 'Koulen', cursive;
+    color:white;
+    letter-spacing: 0.2rem;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 7rem;
+    text-align: center;
+}
+
+.contacts{
+    text-align: center;
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.contacts img {
+    width: 3rem;
+    height: 3rem;
+    border-radius:100%;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.contacts img:hover{
+    box-shadow:0 0 10px rgb(219, 161, 2);
+   
+}
+
+.modal{
+    position: absolute;
+    top:1rem;
+    right: 1rem;
+    z-index: 1;
+}
+.modal button{
+    font-family: 'Koulen', cursive;
+    border:none;
+    background:black;
+    color:white;
+    padding:0.2rem 0.8rem;
+    letter-spacing: 0.1rem;
+    cursor:pointer;
+    transition:all 0.2s
+}
+.modal button:hover{
+    box-shadow:0 0 5px white
+}
+.modalOpen{
+    color:white;
+    position: absolute;
+    background:#222;
+    width: 20rem;
+    top:3rem;
+    right: 3rem;
+    padding: 0.5rem;
+    box-shadow: 0 0 5px rgb(219, 161, 2);
+    border-radius:10% 0 10% 0;
+    animation:modalOpen 0.2s linear
+}
+.modalOpen div{
+    border-bottom:1px solid rgb(219, 161, 2);
+    margin-bottom: 0.5rem;
+}
+@keyframes modalOpen {
+    0%{top:0;right:0;opacity: 0;}
+    100%{top:3rem;right:3rem;opacity: 1;}
+}
+@media (max-width: 800px){
+    .aboutMeName{
+        font-size: 1rem;
+    }
+    
+   
+    .contacts img {
+        width: 2rem;
+        height: 2rem;
+    }
+  
+}
+@media (max-width: 650px){
+    .aboutMe_logo img {
+        height: 5rem;
+        width: 5rem;
+       
+    }
+    .aboutMeName{
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    .contacts{
+        width: 40%;
+    }
+    .aboutMe_logo{
+        top: -2.5rem;
+        left:calc(50% - 2.5rem);
+        width: 5rem;
+        height: 5rem;
+      
+    }
+    .modal{
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+        top: auto;
+        right:auto;
+    }
+    .modalOpen{
+        
+        position: relative;
+        margin: 1rem auto;
+        width: 90%;
+        top:auto;
+        right: auto;
+        padding: 0.5rem;
+        box-shadow: 0 0 5px rgb(219, 161, 2);
+        border-radius:10% 0 10% 0;
+        animation: none;
+    }
+}

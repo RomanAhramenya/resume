@@ -1,0 +1,74 @@
+.aboutSkills_item{
+    font-family: 'Koulen', cursive;
+    padding:0.2rem 1rem;
+    color: rgb(219, 161, 2);
+}
+
+.show{
+    color:white;
+    font-size: 0.7rem;
+    margin: -0.2rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.show:hover{
+    text-decoration: underline;
+}
+.aboutSkills{
+    position: absolute;
+    top: 0;
+}
+.aboutSkilsOpen{
+    position: absolute;
+    top: -5rem;
+    left:2rem;
+    background:rgba(128, 128, 128, 0.432);
+    border:1px solid white;
+    animation: aboutSkilsOpen 0.2s linear;
+    z-index: 1;
+}
+.aboutSkilsOpen h3{
+    margin: 0;
+    margin:0 0.5rem ;
+    border-bottom: 1px solid rgb(219, 161, 2);
+    color:white
+}
+.aboutSkilsOpen .aboutSkills_item{
+    margin: 0 0.5rem;
+    padding:0rem 0.5rem;
+    box-shadow:-2px 0 5px  rgb(219, 161, 2);
+    border-left: 1px solid rgb(219, 161, 2);
+    background:#222
+}
+.aboutSkilsOpen .show{
+    margin: 0.8rem 1rem;
+}
+@keyframes aboutSkilsOpen {
+    0%{left:0;opacity:0}
+    100%{left:2rem;opacity: 1;}
+}
+.aboutSkills h3{
+    color:white;
+    padding:0 1rem ;
+    letter-spacing: 0.1rem;
+}
+@media (max-width: 650px){
+    .aboutSkills_item{
+       font-size: 1rem;
+        padding:0 0.5rem;
+        
+    }
+    .aboutSkills{
+        position: relative;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .aboutSkilsOpen{
+        position: relative;
+    top: auto;
+    left:auto;
+    
+    animation: none;
+    z-index: 1;
+    }
+}
