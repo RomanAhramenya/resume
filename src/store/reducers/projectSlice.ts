@@ -18,7 +18,7 @@ export const ProjectSlice = createSlice({
         [fetchProject.fulfilled.type] : (state,action :PayloadAction<IProject[]> ) => {
             state.isLoading = false;
             state.error = '';
-            state.project = action.payload
+            state.project = action.payload.reverse()
         },
         [fetchProject.pending.type] : (state) => {
             state.isLoading = true;
@@ -46,7 +46,7 @@ export const ProjectSlice = createSlice({
         [postProject.fulfilled.type] : (state,action :PayloadAction<IProject>) => {
             state.isLoading = false;
             state.error ='';
-           state.project.unshift(action.payload)
+           state.project.push(action.payload)
         },
         [postProject.pending.type] : (state) => {
             state.isLoading = true;
