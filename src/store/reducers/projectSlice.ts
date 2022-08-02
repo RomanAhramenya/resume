@@ -46,7 +46,7 @@ export const ProjectSlice = createSlice({
         [postProject.fulfilled.type] : (state,action :PayloadAction<IProject>) => {
             state.isLoading = false;
             state.error ='';
-           state.project.push(action.payload)
+           state.project.unshift(action.payload)
         },
         [postProject.pending.type] : (state) => {
             state.isLoading = true;
