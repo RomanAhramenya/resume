@@ -12,7 +12,7 @@ const Projects:FC = () => {
   return (
     <div className={s.projects}>
         {state.isLoading && <h3>loading...</h3>}
-        {state.project.length > 0 && state.project.reverse().map(el=>{
+        {state.project.length > 0 && state.project.map(el=>{
             return <a href={el.url} target='_blank' key={el.id} className={s.projectItem}>
                 <div className={s.projectImage}>
                     Project
